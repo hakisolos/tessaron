@@ -1,3 +1,4 @@
+import {JSDOM} from 'jsdom'
 export default class Tessaron {
   private document: Document;
 
@@ -6,7 +7,7 @@ export default class Tessaron {
       const parser = new DOMParser();
       this.document = parser.parseFromString(html, "text/html");
     } else {
-      const { JSDOM } = require("jsdom");
+    
       this.document = new JSDOM(html).window.document;
     }
   }

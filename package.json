@@ -1,6 +1,6 @@
 {
   "name": "tessaron",
-  "version": "1.0.0",
+  "version": "1.0.3",
   "description": "A fast HTML parser like Cheerio, built in TypeScript without dependencies.",
   "keywords": ["html", "parser", "dom", "typescript"],
   "homepage": "https://github.com/hakisolos/tessaron#readme",
@@ -26,7 +26,7 @@
     "example": "examples"
   },
   "scripts": {
-    "build": "tsc && cp dist/index.js dist/index.cjs",
+     "build": "tsc && npx cross-env shell=sh && npx shx cp dist/index.js dist/index.cjs",
     "test": "jest",
     "prepublishOnly": "npm run build"
   },
